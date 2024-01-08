@@ -1,21 +1,28 @@
 import FormControl from "@mui/joy/FormControl";
-import Autocomplete from "@mui/joy/Autocomplete";
-import { modelsResponse } from "../../api/mockedData";
 import { MagnifyingGlassIcon } from "@heroicons/react/16/solid";
+import { FC, useState } from "react";
+import { Input } from "@mui/joy";
 
-const SearchWithSuggestions = () => {
+type Props = {
+  placeholder: string,
+  onInput: (val: string) => void
+};
+
+const SearchWithSuggestions: FC<Props> = ({ placeholder, onInput }) => {
+  const [value, setValue] = useState('')
   return (
-    <>
-        <FormControl className="w-full">
-          <Autocomplete
-            freeSolo
-            clearOnEscape
-            startDecorator={<MagnifyingGlassIcon className="w-4 h-4" />}
-            placeholder="Find a model"
-            options={modelsResponse.map((model) => model.model_name)}
-          />
-        </FormControl>
-    </>
+    <FormControl className="w-full">
+      <Input
+        placeholder={placeholder}
+        variant="outlined"
+        value={value}
+        startDecorator={<MagnifyingGlassIcon className="w-4 h-4" />}
+        onChange={(e) => {
+          setValue(e.target.value)
+          onInput(e.target.value)
+        }}
+      />
+    </FormControl>
   );
 };
 
