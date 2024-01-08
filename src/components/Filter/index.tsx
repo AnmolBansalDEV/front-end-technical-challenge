@@ -24,7 +24,7 @@ const Filter: FC<Props> = ({ placeholder, items, onItemSelect }) => {
       value={value}
       placeholder={placeholder}
       startDecorator={<FunnelIcon className="w-4 h-4" />}
-      onChange={(e, newValue) => {
+      onChange={(_, newValue) => {
         setValue(newValue);
         if (!newValue) {
           return;
