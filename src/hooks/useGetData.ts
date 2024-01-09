@@ -24,6 +24,7 @@ export const useGetData = (
         console.error("error fetching data", err);
       }
     })();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return [isLoading, resData] as const;
 };

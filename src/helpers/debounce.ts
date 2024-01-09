@@ -1,6 +1,6 @@
-export const debounce = (fn: (...args: any[]) => void, ms: number) => {
-  let timer: number | undefined;
-  return (...args: any[]) => {
+export const debounce = (fn: (...args: unknown[]) => void, ms: number) => {
+  let timer: NodeJS.Timeout | number | undefined;
+  return (...args: unknown[]) => {
     clearTimeout(timer);
     timer = setTimeout(() => {
         fn.apply(this, args);

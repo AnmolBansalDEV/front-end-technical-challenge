@@ -8,7 +8,7 @@ type Props = {
   onInput: (val: string) => void
 };
 
-const SearchWithSuggestions: FC<Props> = ({ placeholder, onInput }) => {
+const SearchBar: FC<Props> = ({ placeholder, onInput }) => {
   const [value, setValue] = useState('')
   return (
     <FormControl className="w-full">
@@ -26,4 +26,4 @@ const SearchWithSuggestions: FC<Props> = ({ placeholder, onInput }) => {
   );
 };
 
-export default SearchWithSuggestions;
+export default SearchBar;

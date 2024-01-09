@@ -3,7 +3,7 @@ import {
   CardContainer,
   Items,
   Filter,
-  SearchWithSuggestions,
+  SearchBar,
   CardSkeleton,
 } from "../../components";
 import { debounce } from "../../helpers";
@@ -33,11 +33,10 @@ const Inventory = () => {
   return (
     <div className="flex flex-col px-4 gap-7 sm:px-10">
       <div className="flex flex-wrap items-center gap-4 sm:flex-nowrap">
-        <SearchWithSuggestions
+        <SearchBar
           placeholder="Find a modal"
           onInput={debounce((value) => {
-            console.log(value);
-            setSearchValue(value);
+            setSearchValue(value as string);
           }, 300)}
         />
         <Filter
