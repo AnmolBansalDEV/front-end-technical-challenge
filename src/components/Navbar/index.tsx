@@ -5,7 +5,7 @@ import {  NavLink } from "react-router-dom";
 const Navbar: FC = () => {
   return (
     <nav id="nav" className="flex gap-4 p-4 border-b border-zinc-200">
-      <Typography level="title-lg">FE Challenge</Typography>
+      <Typography level="title-lg">AI Models Dashboard</Typography>
       <Divider orientation="vertical" />
       <NavLink to="/">Home</NavLink>
       <NavLink to="/inventory">Inventory</NavLink>

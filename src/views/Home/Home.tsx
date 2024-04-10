@@ -10,17 +10,13 @@ const Home = () => {
         <Divider />
 
         <Typography level="title-lg">
-          Welcome to the Frontend Challenge!
+          Welcome to the AI Models Dashboard!
         </Typography>
 
         <Typography level="body-md">
           This is a simple application that allows the user to view a "Models
           Inventory" with a list of all of their models, and view an Analysis
           data visualization of the models.
-        </Typography>
-
-        <Typography level="body-md">
-          Refer to the README.md file for more information. Best of luck!
         </Typography>
 
         <div>
